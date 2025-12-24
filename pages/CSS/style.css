@@ -47,6 +47,23 @@ body {
   transition: background 0.2s;
 }
 
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #b3b3b3;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.search {
+    cursor: pointer;
+}
+
+.recents {
+    cursor: pointer;
+}
+
 .playlist:hover {
   background: #2a2a2a;
 }

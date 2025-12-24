@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <title>Your Library</title>
@@ -9,26 +8,38 @@
 
 <body>
 
-    <div class="library">
-        <div class="header">
+<div class="library">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
             <h2>Your Library</h2>
+        </div>
+        <div class="header-right">
             <button class="create-btn">+ Create</button>
-        </div>
-
-        <div class="filters">
-            <span class="pill">Playlists</span>
-        </div>
-
-        <div class="playlist" onclick="openPlaylist('My Playlist #2')">
-            <div class="icon">🎵</div>
-            <div class="details">
-                <div class="title">My Playlist #2</div>
-                <div class="subtitle">Playlist • VICHEKA HAV</div>
-            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Filters -->
+    <div class="filters">
+        <span class="pill active">Playlists</span>
+    </div>
 
+    <!-- Search + Recents -->
+    <div class="toolbar">
+        <span class="search">🔍</span>
+        <span class="recents">Recents ☰</span>
+    </div>
+
+    <!-- Playlist Item -->
+    <div class="playlist" onclick="openPlaylist('My Playlist #2')">
+        <div class="icon">🎵</div>
+        <div class="details">
+            <div class="title">My Playlist #2</div>
+            <div class="subtitle">Playlist • VICHEKA HAV</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
