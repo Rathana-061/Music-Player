@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.library {
+  width: 320px;
+  height: 100vh;
+  padding: 16px;
+  background: linear-gradient(#1a1a1a, #000);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-btn {
+  background: #5c5b5b;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filters {
+  margin: 16px 0;
+}
+
+.pill {
+  background: #2a2a2a;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.playlist {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.playlist:hover {
+  background: #2a2a2a;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.details .title {
+  font-weight: bold;
+}
+
+.details .subtitle {
+  font-size: 13px;
+  color: #aaa;
+}
