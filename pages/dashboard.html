@@ -1,12 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Dashboard</h1>
-    <p>Hi</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="menu_side">
+        <h1>Music Player</h1>
+        <div class="playlist">
+          <h4 class="active">
+            <span></span><i class="fa-solid fa-music"></i>Playlist
+          </h4>
+          <!-- <h4><span></span>Last Listened</h4>
+          <h4><span></span>Recommend</h4> -->
+
+          <!-- User's custom playlists -->
+          <div class="user_playlists">
+            <!-- Playlists will be injected here by JS -->
+          </div>
+
+          <!-- Create new playlist button -->
+          <div class="create_playlist">
+            <button id="createPlaylistBtn">
+              <i class="fa-solid fa-plus"></i> Create New Playlist
+            </button>
+          </div>
+        </div>
+        <div class="recently_played">
+          <!-- <h4>Recently Played</h4> -->
+          <!-- <h4 class="active"><span></span><i class="fa-solid fa-music"></i>Recently Played</h4> -->
+
+          <div class="recently_played">
+            <h4 class="active">
+              <span></span><i class="fa-solid fa-music"></i>Recently Played
+            </h4>
+
+            <!-- Recent songs list (last 5) -->
+            <div class="recent_list">
+              <!-- Items will be injected by JavaScript -->
+            </div>
+
+            <!-- View all button -->
+            <div class="view_all_recent">
+              <button id="viewAllRecent">View All Recently Played</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="song_side">
+        <nav>
+          <ul>
+            <li>Discover <span></span></li>
+            <li>My Library</li>
+            <li>Radio</li>
+          </ul>
+
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Music..." />
+          </div>
+
+          <div class="user">
+            <img src="/images/image.png" alt="user-profile" />
+          </div>
+        </nav>
+
+        <div class="content">
+          <h1>Welcome to Music Player</h1>
+          <p>
+            Listen to your favorite music here and have a good day :) <br />
+            Have a nice day :)
+          </p>
+          <div class="buttons">
+            <button>PLAY</button>
+            <button>FOLLOW</button>
+          </div>
+        </div>
+        <div class="popular_song">
+          <div class="h4">
+            <h4>Popular Song</h4>
+            <div class="btn_s">
+              <i id="left_scroll" class="fa-solid fa-arrow-left"></i>
+              <i id="right_scroll" class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <div class="pop_song">
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/11/f0/2a/11f02a350f60709dde6c0ad99b5449e8.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+            <li class="songItem">
+              <div class="img_play">
+                <img
+                  src="https://i.pinimg.com/1200x/cd/f9/0e/cdf90e889da9952f7423d49233e3b3b5.jpg"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-play"
+                  style="
+                    background-color: #1ed760;
+                    color: black;
+                    padding: 15px 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <h5>Alone Night</h5>
+              <br />
+              <div class="subtitle">Ariana Grande</div>
+            </li>
+          </div>
+        </div>
+
+        <!-- <div class="popular_artists">
+                <div class="h4">
+                    <h4>Popular Artists</h4>
+                    <div class="btn_s">
+                        <i id="left_scrolls" class="fa-solid fa-arrow-left"></i>
+                        <i id="right_scrolls" class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="https://i.pinimg.com/736x/f4/0c/6f/f40c6f5fc070d90ee72eda4f797c6ad2.jpg" alt="">
+                    </li>
+                </div>
+            </div> -->
+      </div>
+      <div class="master_play">
+        <div class="wave">
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+        </div>
+        <img
+          src="https://i.pinimg.com/1200x/11/f0/2a/11f02a350f60709dde6c0ad99b5449e8.jpg"
+          alt=""
+        />
+        <div class="div">
+          <h5 id="masterTitle">Alone Night</h5>
+          <div class="subtitle" id="masterArtist">Ariana Grande</div>
+          <!-- Add to Playlist Button -->
+          <button id="addToPlaylistBtn" title="Add to Playlist">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div class="icon">
+          <i class="fa-solid fa-backward-step"></i>
+          <i class="fa-solid fa-play"></i>
+          <i class="fa-solid fa-forward-step"></i>
+        </div>
+        <span id="currentStart">0:00</span>
+        <div class="bar">
+          <input type="range" id="seek" min="0" value="0" max="100" />
+          <div class="bar2" id="bar2"></div>
+          <div class="dot"></div>
+        </div>
+        <span id="currentEnd">0:00</span>
+
+        <div class="vol">
+          <i class="fa-solid fa-volume-high"></i>
+          <input type="range" id="vol" min="0" value="30" max="100" />
+          <div class="vol_bar"></div>
+          <div class="dot" id="vol_dot"></div>
+        </div>
+      </div>
+    </header>
+
+    <script src="/js/script.js"></script>
+  </body>
 </html>
